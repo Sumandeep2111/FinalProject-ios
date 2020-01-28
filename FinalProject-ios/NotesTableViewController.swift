@@ -34,14 +34,14 @@ class NotesTableViewController: UITableViewController,UISearchResultsUpdating {
     @IBAction func btnSort(_ sender: UIBarButtonItem) {
         let alertBox = UIAlertController(title: "Sort", message: "Choose Criteria", preferredStyle: .alert)
                // 2. Add Save and Cancel buttons
-               alertBox.addAction(UIAlertAction(title: "Title(Asc)", style: .default, handler: { alert -> Void in
-                   self.getNotesByTitle()
-                   self.tableView.reloadData()
-               }))
-               alertBox.addAction(UIAlertAction(title: "Title(Desc)", style: .default, handler: { alert -> Void in
-                   self.getNotesByTitleDesc()
-                   self.tableView.reloadData()
-               }))
+//               alertBox.addAction(UIAlertAction(title: "Title(Asc)", style: .default, handler: { alert -> Void in
+//                   self.getNotesByTitle()
+//                   self.tableView.reloadData()
+//               }))
+//               alertBox.addAction(UIAlertAction(title: "Title(Desc)", style: .default, handler: { alert -> Void in
+//                   self.getNotesByTitleDesc()
+//                   self.tableView.reloadData()
+//               }))
                alertBox.addAction(UIAlertAction(title: "Date(Recent first)", style: .default, handler: { alert -> Void in
                    self.getNotesByDateRecent()
                    self.tableView.reloadData()
@@ -75,7 +75,7 @@ class NotesTableViewController: UITableViewController,UISearchResultsUpdating {
            let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
            fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
            //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
-           fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+          // fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
            
            do {
                self.notes = try context.fetch(fetchRequest)
@@ -91,7 +91,7 @@ class NotesTableViewController: UITableViewController,UISearchResultsUpdating {
            let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
            fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
            //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
-           fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: false)]
+           //fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: false)]
            
            do {
                self.notes = try context.fetch(fetchRequest)
@@ -105,7 +105,7 @@ class NotesTableViewController: UITableViewController,UISearchResultsUpdating {
        func getNotesByDateRecent() {
            // 1. get notes from the database
            let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
-           fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
+           //fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
            //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateAdded", ascending: false)]
            
@@ -121,9 +121,9 @@ class NotesTableViewController: UITableViewController,UISearchResultsUpdating {
        func getNotesByDateOldest() {
            // 1. get notes from the database
            let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
-           fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
-           //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
-           fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateAdded", ascending: true)]
+//           fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
+//           //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
+//           fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateAdded", ascending: true)]
            
            do {
                self.notes = try context.fetch(fetchRequest)
@@ -214,6 +214,7 @@ class NotesTableViewController: UITableViewController,UISearchResultsUpdating {
         }    
     }
     override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
         // This function is called:
         // - after viewDidLoad (the first time)
         // - after coming "back" to this screen

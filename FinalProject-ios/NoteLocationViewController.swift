@@ -12,8 +12,8 @@ import  CoreLocation
 import CoreData
 
 class NoteLocationViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
-    var latitude:Double = 48
-    var longitude:Double = -78
+    var latitude:Double?
+    var longitude:Double?
     
     var locationmanager = CLLocationManager()
     
@@ -33,7 +33,7 @@ class NoteLocationViewController: UIViewController,CLLocationManagerDelegate,MKM
         myMapView.showsUserLocation = true
         print("user latitude = \(latitude)")
         print("user longitude = \(longitude)")
-        let noteLocation = CLLocation(latitude: latitude, longitude: longitude)
+        let noteLocation = CLLocation(latitude: latitude!, longitude: longitude!)
           super.viewDidLoad(); self.navigationController!.setNavigationBarHidden(false, animated: true)
         self.title = "Note Location"
         
