@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D014814E23E0B92F00FDCE9A /* recordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014814D23E0B92F00FDCE9A /* recordingViewController.swift */; };
 		D042BF6723DF3DEB00365068 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042BF6623DF3DEB00365068 /* CategoryTableViewController.swift */; };
 		D042BF6923DF422700365068 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042BF6823DF422700365068 /* NotesTableViewController.swift */; };
 		D042BF6B23DF486100365068 /* EditNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042BF6A23DF486100365068 /* EditNotesViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D014814D23E0B92F00FDCE9A /* recordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recordingViewController.swift; sourceTree = "<group>"; };
 		D042BF6623DF3DEB00365068 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		D042BF6823DF422700365068 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		D042BF6A23DF486100365068 /* EditNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNotesViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				D042BF6823DF422700365068 /* NotesTableViewController.swift */,
 				D042BF6A23DF486100365068 /* EditNotesViewController.swift */,
 				D042BF7623DF578E00365068 /* NoteLocationViewController.swift */,
+				D014814D23E0B92F00FDCE9A /* recordingViewController.swift */,
 			);
 			path = "FinalProject-ios";
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				D0F8D30B23DA2C9E005D880A /* FinalProject_ios.xcdatamodeld in Sources */,
 				D0F8D30123DA2C9E005D880A /* AppDelegate.swift in Sources */,
 				D0F8D30323DA2C9E005D880A /* SceneDelegate.swift in Sources */,
+				D014814E23E0B92F00FDCE9A /* recordingViewController.swift in Sources */,
 				D042BF7723DF578E00365068 /* NoteLocationViewController.swift in Sources */,
 				D042BF6723DF3DEB00365068 /* CategoryTableViewController.swift in Sources */,
 				D042BF6923DF422700365068 /* NotesTableViewController.swift in Sources */,

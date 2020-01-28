@@ -188,26 +188,12 @@
                                     <action selector="selectimage:" destination="jwJ-XK-fWe" eventType="touchUpInside" id="swd-2R-3ce"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTf-Uh-T6i">
-                                <rect key="frame" x="129" y="307" width="95" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTh-zq-bH5">
+                                <rect key="frame" x="215" y="307" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Recording">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Record Audio"/>
                                 <connections>
-                                    <action selector="recordbtn:" destination="jwJ-XK-fWe" eventType="touchUpInside" id="oZW-uI-pNG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1P-9i-bVh">
-                                <rect key="frame" x="232" y="307" width="66" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnplay:" destination="jwJ-XK-fWe" eventType="touchUpInside" id="IUy-Ql-W6N"/>
+                                    <segue destination="yTE-IP-Coi" kind="show" id="Gsk-x0-PaZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -226,8 +212,6 @@
                         <outlet property="lblLat" destination="QSj-Ef-Xzv" id="FYc-2k-Lot"/>
                         <outlet property="lblLong" destination="eAh-io-f9I" id="4ah-Ks-4u8"/>
                         <outlet property="notesImageView" destination="V5C-Di-jGN" id="Blf-h6-zvh"/>
-                        <outlet property="playlbl" destination="X1P-9i-bVh" id="bdV-zL-iFt"/>
-                        <outlet property="recordlbl" destination="tTf-Uh-T6i" id="hP4-2s-bZm"/>
                         <outlet property="textView" destination="RPh-tr-aIW" id="bZI-s6-xSr"/>
                         <outlet property="txttitle" destination="uYv-o2-NyV" id="swI-Zg-h8i"/>
                     </connections>
@@ -235,6 +219,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gz-BL-NZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2069.5999999999999" y="-251.42428785607197"/>
+        </scene>
+        <!--Recording View Controller-->
+        <scene sceneID="Kp2-Xz-MxZ">
+            <objects>
+                <viewController id="yTE-IP-Coi" customClass="recordingViewController" customModule="FinalProject_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d0j-fa-hB1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVS-Ss-AM5">
+                                <rect key="frame" x="97" y="165" width="177" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="record"/>
+                                <connections>
+                                    <action selector="start_recording:" destination="yTE-IP-Coi" eventType="touchUpInside" id="vwu-oF-gfh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3S-5T-CaN">
+                                <rect key="frame" x="97" y="265" width="177" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="play"/>
+                                <connections>
+                                    <action selector="play_recording:" destination="yTE-IP-Coi" eventType="touchUpInside" id="8Cj-Ty-gsM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jc-Qv-Vbh">
+                                <rect key="frame" x="141" y="79" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hOa-g6-eyc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0ip-et-NU2"/>
+                    <connections>
+                        <outlet property="play_btn_ref" destination="m3S-5T-CaN" id="d22-9z-pPn"/>
+                        <outlet property="record_btn_ref" destination="IVS-Ss-AM5" id="dWz-Cb-GSn"/>
+                        <outlet property="recordingTimeLabel" destination="1Jc-Qv-Vbh" id="WwO-Um-kh1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUY-tM-2Yn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101.5999999999999" y="526.6866566716642"/>
         </scene>
         <!--Note Location View Controller-->
         <scene sceneID="mJy-rF-D2E">
