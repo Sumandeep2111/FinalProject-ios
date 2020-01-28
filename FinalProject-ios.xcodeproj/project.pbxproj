@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D042BF6723DF3DEB00365068 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042BF6623DF3DEB00365068 /* CategoryTableViewController.swift */; };
+		D042BF6923DF422700365068 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042BF6823DF422700365068 /* NotesTableViewController.swift */; };
+		D042BF6B23DF486100365068 /* EditNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042BF6A23DF486100365068 /* EditNotesViewController.swift */; };
+		D042BF6D23DF4B0800365068 /* myNotesLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D042BF6C23DF4B0800365068 /* myNotesLogo.png */; };
+		D042BF7123DF4B2E00365068 /* addImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D042BF7023DF4B2E00365068 /* addImage.png */; };
+		D042BF7323DF4B3400365068 /* noteBackgrond.png in Resources */ = {isa = PBXBuildFile; fileRef = D042BF7223DF4B3400365068 /* noteBackgrond.png */; };
+		D042BF7523DF4B3900365068 /* MyNotesAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D042BF7423DF4B3900365068 /* MyNotesAppIcon.png */; };
+		D042BF7723DF578E00365068 /* NoteLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042BF7623DF578E00365068 /* NoteLocationViewController.swift */; };
 		D0F8D30123DA2C9E005D880A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8D30023DA2C9E005D880A /* AppDelegate.swift */; };
 		D0F8D30323DA2C9E005D880A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8D30223DA2C9E005D880A /* SceneDelegate.swift */; };
-		D0F8D30523DA2C9E005D880A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8D30423DA2C9E005D880A /* ViewController.swift */; };
 		D0F8D30823DA2C9E005D880A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F8D30623DA2C9E005D880A /* Main.storyboard */; };
 		D0F8D30B23DA2C9E005D880A /* FinalProject_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0F8D30923DA2C9E005D880A /* FinalProject_ios.xcdatamodeld */; };
 		D0F8D30D23DA2C9F005D880A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F8D30C23DA2C9F005D880A /* Assets.xcassets */; };
@@ -17,10 +24,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D042BF6623DF3DEB00365068 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		D042BF6823DF422700365068 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		D042BF6A23DF486100365068 /* EditNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNotesViewController.swift; sourceTree = "<group>"; };
+		D042BF6C23DF4B0800365068 /* myNotesLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myNotesLogo.png; sourceTree = "<group>"; };
+		D042BF7023DF4B2E00365068 /* addImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addImage.png; sourceTree = "<group>"; };
+		D042BF7223DF4B3400365068 /* noteBackgrond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noteBackgrond.png; sourceTree = "<group>"; };
+		D042BF7423DF4B3900365068 /* MyNotesAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyNotesAppIcon.png; sourceTree = "<group>"; };
+		D042BF7623DF578E00365068 /* NoteLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteLocationViewController.swift; sourceTree = "<group>"; };
 		D0F8D2FD23DA2C9E005D880A /* FinalProject-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FinalProject-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F8D30023DA2C9E005D880A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0F8D30223DA2C9E005D880A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D0F8D30423DA2C9E005D880A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0F8D30723DA2C9E005D880A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0F8D30A23DA2C9E005D880A /* FinalProject_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalProject_ios.xcdatamodel; sourceTree = "<group>"; };
 		D0F8D30C23DA2C9F005D880A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,12 +74,19 @@
 			children = (
 				D0F8D30023DA2C9E005D880A /* AppDelegate.swift */,
 				D0F8D30223DA2C9E005D880A /* SceneDelegate.swift */,
-				D0F8D30423DA2C9E005D880A /* ViewController.swift */,
 				D0F8D30623DA2C9E005D880A /* Main.storyboard */,
 				D0F8D30C23DA2C9F005D880A /* Assets.xcassets */,
+				D042BF7023DF4B2E00365068 /* addImage.png */,
+				D042BF6C23DF4B0800365068 /* myNotesLogo.png */,
+				D042BF7223DF4B3400365068 /* noteBackgrond.png */,
+				D042BF7423DF4B3900365068 /* MyNotesAppIcon.png */,
 				D0F8D30E23DA2C9F005D880A /* LaunchScreen.storyboard */,
 				D0F8D31123DA2C9F005D880A /* Info.plist */,
 				D0F8D30923DA2C9E005D880A /* FinalProject_ios.xcdatamodeld */,
+				D042BF6623DF3DEB00365068 /* CategoryTableViewController.swift */,
+				D042BF6823DF422700365068 /* NotesTableViewController.swift */,
+				D042BF6A23DF486100365068 /* EditNotesViewController.swift */,
+				D042BF7623DF578E00365068 /* NoteLocationViewController.swift */,
 			);
 			path = "FinalProject-ios";
 			sourceTree = "<group>";
@@ -130,6 +151,10 @@
 			files = (
 				D0F8D31023DA2C9F005D880A /* LaunchScreen.storyboard in Resources */,
 				D0F8D30D23DA2C9F005D880A /* Assets.xcassets in Resources */,
+				D042BF7523DF4B3900365068 /* MyNotesAppIcon.png in Resources */,
+				D042BF6D23DF4B0800365068 /* myNotesLogo.png in Resources */,
+				D042BF7323DF4B3400365068 /* noteBackgrond.png in Resources */,
+				D042BF7123DF4B2E00365068 /* addImage.png in Resources */,
 				D0F8D30823DA2C9E005D880A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D042BF6B23DF486100365068 /* EditNotesViewController.swift in Sources */,
 				D0F8D30B23DA2C9E005D880A /* FinalProject_ios.xcdatamodeld in Sources */,
-				D0F8D30523DA2C9E005D880A /* ViewController.swift in Sources */,
 				D0F8D30123DA2C9E005D880A /* AppDelegate.swift in Sources */,
 				D0F8D30323DA2C9E005D880A /* SceneDelegate.swift in Sources */,
+				D042BF7723DF578E00365068 /* NoteLocationViewController.swift in Sources */,
+				D042BF6723DF3DEB00365068 /* CategoryTableViewController.swift in Sources */,
+				D042BF6923DF422700365068 /* NotesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86Q86F9H25;
 				INFOPLIST_FILE = "FinalProject-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86Q86F9H25;
 				INFOPLIST_FILE = "FinalProject-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
