@@ -10,16 +10,16 @@ import UIKit
 import CoreData
 
 class NotesTableViewController: UITableViewController,UISearchResultsUpdating {
-    var array = [String]()
-       var filteredArray = [String]()
-       var searchController = UISearchController()
-       var resultsController = UITableViewController()
-     //-- Variables
-       var lati: Double = 0
-       var longi: Double = 0
-       var notebook : Notebook!
-       var notes : [Note] = []
-       var context : NSManagedObjectContext!
+      var array = [String]()
+      var filteredArray = [String]()
+      var searchController = UISearchController()
+      var resultsController = UITableViewController()
+    //-- Variables
+      var lati: Double = 0
+      var longi: Double = 0
+      var notebook : Notebook!
+      var notes : [Note] = []
+      var context : NSManagedObjectContext!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,73 +68,74 @@ class NotesTableViewController: UITableViewController,UISearchResultsUpdating {
           resultsController.tableView.reloadData()
       }
     //  Database helper functions
-       
-       
-       func getNotesByTitle() {
-           // 1. get notes from the database
-           let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
-           fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
-           //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
-          // fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-           
-           do {
-               self.notes = try context.fetch(fetchRequest)
-           }
-           catch{
-               print("Error while fetching notes from database")
-               dismiss(animated: true, completion: nil)
-           }
-           
-       }
-       func getNotesByTitleDesc() {
-           // 1. get notes from the database
-           let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
-           fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
-           //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
-           //fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: false)]
-           
-           do {
-               self.notes = try context.fetch(fetchRequest)
-           }
-           catch{
-               print("Error while fetching notes from database")
-               dismiss(animated: true, completion: nil)
-           }
-           
-       }
-       func getNotesByDateRecent() {
-           // 1. get notes from the database
-           let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
-           //fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
-           //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
-           fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateAdded", ascending: false)]
-           
-           do {
-               self.notes = try context.fetch(fetchRequest)
-           }
-           catch{
-               print("Error while fetching notes from database")
-               dismiss(animated: true, completion: nil)
-           }
-           
-       }
-       func getNotesByDateOldest() {
-           // 1. get notes from the database
-           let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
-//           fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
-//           //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
-//           fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateAdded", ascending: true)]
-           
-           do {
-               self.notes = try context.fetch(fetchRequest)
-           }
-           catch{
-               print("Error while fetching notes from database")
-               dismiss(animated: true, completion: nil)
-           }
-           
-       }
+    
+    
+    func getNotesByTitle() {
+        // 1. get notes from the database
+        let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
+        //fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
+        //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        
+        do {
+            self.notes = try context.fetch(fetchRequest)
+        }
+        catch{
+            print("Error while fetching notes from database")
+            dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    func getNotesByTitleDesc() {
+        // 1. get notes from the database
+        let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
+        //fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
+        //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: false)]
+        
+        do {
+            self.notes = try context.fetch(fetchRequest)
+        }
+        catch{
+            print("Error while fetching notes from database")
+            dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    func getNotesByDateRecent() {
+        // 1. get notes from the database
+        let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
+        //fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
+        //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateAdded", ascending: false)]
+        
+        do {
+            self.notes = try context.fetch(fetchRequest)
+        }
+        catch{
+            print("Error while fetching notes from database")
+            dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    func getNotesByDateOldest() {
+        // 1. get notes from the database
+        let fetchRequest:NSFetchRequest<Note> = Note.fetchRequest()
+        //fetchRequest.predicate = NSPredicate(format: "notebook = %@", notebook)
+        //fetchRequest.predicate = NSPredicate(format: "notebook.name = %@", notebook.name)
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateAdded", ascending: true)]
+        
+        do {
+            self.notes = try context.fetch(fetchRequest)
+        }
+        catch{
+            print("Error while fetching notes from database")
+            dismiss(animated: true, completion: nil)
+        }
+        
+    }
 
+    
     
     // MARK: - Table view data source
 
@@ -145,34 +146,35 @@ class NotesTableViewController: UITableViewController,UISearchResultsUpdating {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if tableView == resultsController.tableView{
-                   return filteredArray.count
-               }
-               else{
-                   return notes.count
-               }
+            if tableView == resultsController.tableView{
+               return filteredArray.count
+           }
+           else{
+               return notes.count
+           }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    // Configure the cell...
-        if tableView == resultsController.tableView {
-                  resultsController.tableView.rowHeight = 60
-                  let celll = UITableViewCell()
-                  
-                  celll.textLabel?.text = filteredArray[indexPath.row]
-            
-                  return celll
-              }
-        else {
-                  let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-              cell.detailTextLabel?.text = "\(notes[indexPath.row].dateAdded!)"
-              cell.textLabel?.text = notes[indexPath.row].title!
-              lati = notes[indexPath.row].lat
-              longi = notes[indexPath.row].long
 
-              return cell
-              }
+    // Configure the cell...
+    if tableView == resultsController.tableView {
+        resultsController.tableView.rowHeight = 60
+        let celll = UITableViewCell()
+        celll.textLabel?.text = filteredArray[indexPath.row]
+        //cell.textLabel?.text = filteredArray[indexPath.row]
+        return celll
+    }
+    else {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    
+    cell.detailTextLabel?.text = "\(notes[indexPath.row].dateAdded!)"
+    cell.textLabel?.text = notes[indexPath.row].title!
+    lati = notes[indexPath.row].lat
+    longi = notes[indexPath.row].long
+
+    return cell
+    }
 
     }
     
@@ -214,22 +216,27 @@ class NotesTableViewController: UITableViewController,UISearchResultsUpdating {
         }    
     }
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
-        // This function is called:
-        // - after viewDidLoad (the first time)
-        // - after coming "back" to this screen
-        searchController.searchBar.autocapitalizationType = .none
+        
+       searchController.searchBar.autocapitalizationType = .none
         
         searchController = UISearchController(searchResultsController: resultsController)
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
+        
         resultsController.tableView.delegate = self
         resultsController.tableView.dataSource = self
+        
+        
         // 1. set up database variables
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         context = appDelegate.persistentContainer.viewContext
+        
+        
         print("Welcome to the notes controller")
+        
         self.getNotesByDateRecent()
+        
+        
         for note in self.notes {
             print("\(note.dateAdded!) \(note.text!)")
             array.append("Title: \(note.title!) ; Note: \(String(describing: note.text!))")
@@ -238,10 +245,6 @@ class NotesTableViewController: UITableViewController,UISearchResultsUpdating {
         searchController.searchBar.autocapitalizationType = .none
         self.getNotesByDateRecent()
         self.tableView.reloadData()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        array.removeAll()
     }
     
     

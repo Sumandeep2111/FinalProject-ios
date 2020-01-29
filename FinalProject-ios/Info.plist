@@ -6,6 +6,8 @@
 	<string>Usage of microphoen using application</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>while using app</string>
+	<key>CFBundleIconFile</key>
+	<string>MyNotesAppIcon.png</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

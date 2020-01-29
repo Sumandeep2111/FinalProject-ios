@@ -34,15 +34,10 @@ class EditNotesViewController: UIViewController,  UINavigationControllerDelegate
       var note:Note!
       var notebook : Notebook?
       var userIsEditing = true
-     var old = true
-
-    // MARK: -- database
+// MARK: -- database
     var context:NSManagedObjectContext!
     @IBAction func getloc(_ sender: UIButton) {
-        
-        
-        
-    }
+        }
     override func viewDidLoad() {
         super.viewDidLoad()
         // playlbl.isEnabled = old
@@ -185,7 +180,6 @@ class EditNotesViewController: UIViewController,  UINavigationControllerDelegate
                    alertBox.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                    self.present(alertBox, animated: true, completion: nil)
                }
-               
                if (userIsEditing == false) {
                    self.navigationController?.popViewController(animated: true)
                    //self.dismiss(animated: true, completion: nil)
@@ -193,82 +187,6 @@ class EditNotesViewController: UIViewController,  UINavigationControllerDelegate
                
                
     }
-    // Recording part
-    
-//     func getDocumentsDirector() -> URL {
-//         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-//             return paths[0]
-//         }
-//
-//         func setupRecorder() {
-//          let audioFilename = getDocumentsDirector().appendingPathComponent("\(txttitle.text).m4a")
-//             let recordSetting = [ AVFormatIDKey : kAudioFormatAppleLossless ,
-//                                   AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue,
-//                                   AVEncoderBitRateKey : 320000,
-//                                   AVNumberOfChannelsKey : 2,
-//                                   AVSampleRateKey : 44100.2 ] as [String : Any]
-//             do {
-//                 SoundRecorder = try AVAudioRecorder(url: audioFilename, settings: recordSetting)
-//                 SoundRecorder.delegate = self
-//                 SoundRecorder.prepareToRecord()
-//             } catch {
-//                 print(error)
-//             }
-//         }
-//
-//         func setupPlayer() {
-//             let audioFilename = getDocumentsDirector().appendingPathComponent("\(txttitle.text).m4a")
-//             do {
-//                 SoundPlayer = try AVAudioPlayer(contentsOf: audioFilename)
-//                 SoundPlayer.delegate = self
-//                 SoundPlayer.prepareToPlay()
-//                 SoundPlayer.volume = 1.0
-//             } catch {
-//                 print(error)
-//             }
-//
-//         }
-//
-//         func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-//             playlbl.isEnabled = true
-//         }
-//
-//         func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-//             recordlbl.isEnabled = true
-//             playlbl.setTitle("Play", for: .normal)
-//         }
-//
-//
-//    @IBAction func recordbtn(_ sender: UIButton) {
-//      if recordlbl.titleLabel?.text == "Record" {
-//                         setupRecorder()
-//                        SoundRecorder.record()
-//                        recordlbl.setTitle("Stop", for: .normal)
-//                        playlbl.isEnabled = false
-//                    } else {
-//                        SoundRecorder.stop()
-//                        recordlbl.setTitle("Record", for: .normal)
-//                        playlbl.isEnabled = false
-//                    }
-//
-//    }
-//
-//    @IBAction func btnplay(_ sender: UIButton) {
-//      if playlbl.titleLabel?.text == "Play"
-//                    {
-//                            playlbl.setTitle("Stop", for: .normal)
-//                            recordlbl.isEnabled = false
-//                            setupPlayer()
-//                            SoundPlayer.play()
-//                        } else {
-//
-//                            SoundPlayer!.stop()
-//                            playlbl.setTitle("Play", for: .normal)
-//                            recordlbl.isEnabled = false
-//        }
-                 
-    
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
